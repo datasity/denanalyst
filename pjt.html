@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Analyst Den</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html"><img src="assets/analyst-den-logo-3d.png" class="logo-img" alt="Analyst Den Logo"></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="pjt.html" class="active">Projects</a>
+      <a href="process.html">Process</a>
+      <a href="publications.html">Publications</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <button class="close-menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="pjt.html" class="active">Projects</a>
+  <a href="process.html">Process</a>
+  <a href="publications.html">Publications</a>
+  <a href="get-involved.html">Get Involved</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="projects-page-hero">
+  <div class="container">
+    <span class="section-label" style="background:rgba(212,166,64,0.2);border-color:rgba(212,166,64,0.4);">Research Portfolio</span>
+    <h2 style="margin-top:12px;">Explore Our Projects</h2>
+    <p>Real-world data projects designed for learning, collaboration, and public impact.</p>
+  </div>
+</div>
+
+<main>
+  <section class="projects projects-page">
+    <div class="container">
+
+      <div class="categories projects-categories">
+        <button class="active" data-category-filter="all">All</button>
+        <button data-category-filter="Transportation">Transportation</button>
+        <button data-category-filter="Environment">Environment</button>
+        <button data-category-filter="Health">Health</button>
+        <button data-category-filter="Education">Education</button>
+        <button data-category-filter="Governance">Governance</button>
+      </div>
+
+      <div class="projects-controls">
+        <div class="projects-controls-left">
+          <div class="projects-status-filters">
+            <button data-status-filter="upcoming">Upcoming</button>
+            <button class="active" data-status-filter="ongoing">Ongoing</button>
+            <button data-status-filter="completed">Completed</button>
+          </div>
+          <label class="projects-switch-label">
+            <input type="checkbox" id="filter-contributors">
+            <span>Accepting Contributors</span>
+          </label>
+        </div>
+        <div class="projects-sort">
+          <select id="projects-sort-select">
+            <option value="Oldest">Oldest First</option>
+            <option value="Newest">Newest First</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="project-grid projects-grid">
+
+        <div class="project-card" data-category="Transportation" data-status="ongoing" data-contributors="yes" data-date="2026-03-01">
+          <div class="card-img" style="background-image:url('assets/trans.png');"></div>
+          <div class="card-body">
+            <span class="card-status ongoing">Ongoing</span>
+            <h3>Transportation Cost Stress</h3>
+            <ul>
+              <li>Location: Ogun State, Nigeria</li>
+              <li>Study Period: March – May 2026</li>
+              <li>Data Collection: Field Surveys</li>
+              <li>Output: Public Insights Report</li>
+            </ul>
+            <a href="red.html" class="read-more">Read more →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Environment" data-status="ongoing" data-contributors="no" data-date="2026-06-01">
+          <div class="card-img" style="background-image:url('assets/mark.png');"></div>
+          <div class="card-body">
+            <span class="card-status ongoing">Ongoing</span>
+            <h3>Market Environmental Conditions</h3>
+            <ul>
+              <li>Location: Ogun State, Nigeria</li>
+              <li>Study Period: June – Aug 2026</li>
+              <li>Data Collection: Field Surveys</li>
+              <li>Output: Public Insights Report</li>
+            </ul>
+            <a href="red.html" class="read-more">Read more →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Health" data-status="ongoing" data-contributors="yes" data-date="2026-09-01">
+          <div class="card-img" style="background-image:url('assets/buss.png');"></div>
+          <div class="card-body">
+            <span class="card-status ongoing">Ongoing</span>
+            <h3>SME Business Cashflow Stress</h3>
+            <ul>
+              <li>Location: Ogun State, Nigeria</li>
+              <li>Study Period: Sept – Nov 2026</li>
+              <li>Data Collection: Field Surveys</li>
+              <li>Output: Public Insights Report</li>
+            </ul>
+            <a href="red.html" class="read-more">Read more →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Education" data-status="upcoming" data-contributors="no" data-date="2026-12-01">
+          <div class="card-img" style="background:var(--muted-bg);"></div>
+          <div class="card-body">
+            <span class="card-status upcoming">Upcoming</span>
+            <h3>Education Outcomes Study</h3>
+            <ul><li>Status: Coming Soon</li></ul>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Governance" data-status="upcoming" data-contributors="no" data-date="2027-01-01">
+          <div class="card-img" style="background:var(--muted-bg);"></div>
+          <div class="card-body">
+            <span class="card-status upcoming">Upcoming</span>
+            <h3>Local Governance Efficiency</h3>
+            <ul><li>Status: Coming Soon</li></ul>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Environment" data-status="upcoming" data-contributors="no" data-date="2027-02-01">
+          <div class="card-img" style="background:var(--muted-bg);"></div>
+          <div class="card-body">
+            <span class="card-status upcoming">Upcoming</span>
+            <h3>Urban Waste Management</h3>
+            <ul><li>Status: Coming Soon</li></ul>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Health" data-status="upcoming" data-contributors="no" data-date="2027-03-01">
+          <div class="card-img" style="background:var(--muted-bg);"></div>
+          <div class="card-body">
+            <span class="card-status upcoming">Upcoming</span>
+            <h3>Community Health Access</h3>
+            <ul><li>Status: Coming Soon</li></ul>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Transportation" data-status="upcoming" data-contributors="no" data-date="2027-04-01">
+          <div class="card-img" style="background:var(--muted-bg);"></div>
+          <div class="card-body">
+            <span class="card-status upcoming">Upcoming</span>
+            <h3>Public Transport Efficiency</h3>
+            <ul><li>Status: Coming Soon</li></ul>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Education" data-status="upcoming" data-contributors="no" data-date="2027-05-01">
+          <div class="card-img" style="background:var(--muted-bg);"></div>
+          <div class="card-body">
+            <span class="card-status upcoming">Upcoming</span>
+            <h3>Digital Skills Adoption</h3>
+            <ul><li>Status: Coming Soon</li></ul>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="Governance" data-status="upcoming" data-contributors="no" data-date="2027-06-01">
+          <div class="card-img" style="background:var(--muted-bg);"></div>
+          <div class="card-body">
+            <span class="card-status upcoming">Upcoming</span>
+            <h3>Public Finance Transparency</h3>
+            <ul><li>Status: Coming Soon</li></ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pagination projects-pagination">
+        <button data-page="prev">‹</button>
+        <button class="active" data-page="1">1</button>
+        <button data-page="2">2</button>
+        <button data-page="next">›</button>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><p>© 2026 Analyst Den by Datavasity</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

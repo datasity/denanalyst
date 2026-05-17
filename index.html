@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analyst Den | Turning Data Skills Into Real-World Impact</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html"><img src="assets/analyst-den-logo-3d.png" class="logo-img" alt="Analyst Den Logo"></a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="pjt.html">Projects</a>
+      <a href="process.html">Process</a>
+      <a href="publications.html">Publications</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <button class="close-menu">✕</button>
+  <a href="index.html" class="active">Home</a>
+  <a href="about.html">About</a>
+  <a href="pjt.html">Projects</a>
+  <a href="process.html">Process</a>
+  <a href="publications.html">Publications</a>
+  <a href="get-involved.html">Get Involved</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="section-label">Applied Analytics Platform</span>
+      <h1>Turning Data Skills<br><span id="typing-text"></span></h1>
+      <p>Analyst Den is Datavasity's applied analytics platform helping analysts move from training to solving real public and business problems — with research that matters.</p>
+      <div class="hero-actions">
+        <a href="get-involved.html#apply-form" class="btn primary">Become a Contributor</a>
+        <a href="pjt.html" class="btn secondary">View Projects</a>
+      </div>
+    </div>
+    <div class="hero-image"></div>
+  </div>
+</section>
+
+<!-- PROJECTS PREVIEW -->
+<section class="projects" style="background:var(--muted-bg); border-top:1.5px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Live Research</span>
+      <h2>Explore Our Projects</h2>
+      <p>Real-world data projects designed for learning, collaboration, and measurable impact.</p>
+    </div>
+
+    <div class="categories">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="transportation">Transportation</button>
+      <button data-filter="environment">Environment</button>
+      <button data-filter="health">Health</button>
+      <button data-filter="education">Education</button>
+      <button data-filter="governance">Governance</button>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card" data-category="Transportation" data-status="ongoing" data-contributors="yes" data-date="2026-03-01">
+        <div class="card-img" style="background-image:url('assets/trans.png');"></div>
+        <div class="card-body">
+          <span class="card-status ongoing">Ongoing</span>
+          <h3>Transportation Cost Stress</h3>
+          <ul>
+            <li>Location: Ogun State, Nigeria</li>
+            <li>Study Period: March – May 2026</li>
+            <li>Data Collection: Field Surveys</li>
+            <li>Output: Public Insights Report</li>
+          </ul>
+          <a href="red.html" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="Environment" data-status="ongoing" data-contributors="no" data-date="2026-06-01">
+        <div class="card-img" style="background-image:url('assets/mark.png');"></div>
+        <div class="card-body">
+          <span class="card-status ongoing">Ongoing</span>
+          <h3>Market Environmental Conditions</h3>
+          <ul>
+            <li>Location: Ogun State, Nigeria</li>
+            <li>Study Period: June – Aug 2026</li>
+            <li>Data Collection: Field Surveys</li>
+            <li>Output: Public Insights Report</li>
+          </ul>
+          <a href="red.html" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="Health" data-status="ongoing" data-contributors="yes" data-date="2026-09-01">
+        <div class="card-img" style="background-image:url('assets/buss.png');"></div>
+        <div class="card-body">
+          <span class="card-status ongoing">Ongoing</span>
+          <h3>SME Business Cashflow Stress</h3>
+          <ul>
+            <li>Location: Ogun State, Nigeria</li>
+            <li>Study Period: Sept – Nov 2026</li>
+            <li>Data Collection: Field Surveys</li>
+            <li>Output: Public Insights Report</li>
+          </ul>
+          <a href="red.html" class="read-more">Read more →</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px;">
+      <a href="pjt.html" class="btn secondary">View All Projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS STRIP -->
+<section style="padding:80px 0; background:var(--cream); border-top:1.5px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">How It Works</span>
+      <h2>From application to published research</h2>
+      <p>A clear path from joining to contributing to getting credited on real public-facing reports.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:56px;">
+      <div style="text-align:center; padding:28px 20px; background:var(--white); border:1.5px solid var(--border); border-radius:var(--radius-lg);">
+        <div style="font-family:var(--font-display); font-size:36px; font-weight:700; color:var(--gold); opacity:0.8; margin-bottom:12px;">01</div>
+        <h3 style="font-size:16px; margin-bottom:8px;">Apply</h3>
+        <p style="font-size:13px;">Fill in the contributor form — takes under 3 minutes.</p>
+      </div>
+      <div style="text-align:center; padding:28px 20px; background:var(--white); border:1.5px solid var(--border); border-radius:var(--radius-lg);">
+        <div style="font-family:var(--font-display); font-size:36px; font-weight:700; color:var(--gold); opacity:0.8; margin-bottom:12px;">02</div>
+        <h3 style="font-size:16px; margin-bottom:8px;">Get Matched</h3>
+        <p style="font-size:13px;">We review and match you to a project that fits your skills.</p>
+      </div>
+      <div style="text-align:center; padding:28px 20px; background:var(--white); border:1.5px solid var(--border); border-radius:var(--radius-lg);">
+        <div style="font-family:var(--font-display); font-size:36px; font-weight:700; color:var(--gold); opacity:0.8; margin-bottom:12px;">03</div>
+        <h3 style="font-size:16px; margin-bottom:8px;">Contribute</h3>
+        <p style="font-size:13px;">Do real fieldwork, analysis, or writing with full mentorship.</p>
+      </div>
+      <div style="text-align:center; padding:28px 20px; background:var(--white); border:1.5px solid var(--border); border-radius:var(--radius-lg);">
+        <div style="font-family:var(--font-display); font-size:36px; font-weight:700; color:var(--gold); opacity:0.8; margin-bottom:12px;">04</div>
+        <h3 style="font-size:16px; margin-bottom:8px;">Get Published</h3>
+        <p style="font-size:13px;">Your name on a public report and a profile page on this site.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="get-involved.html#apply-form" class="btn primary">Apply Now — It's Free →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRIBUTORS STRIP -->
+<section style="padding:80px 0; background:var(--muted-bg); border-top:1.5px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">The Community</span>
+      <h2>Built by Contributors</h2>
+      <p>Analysts, researchers, and collaborators working on real-world data projects.</p>
+    </div>
+    <div style="display:flex; justify-content:center; gap:32px; flex-wrap:wrap; margin-bottom:40px;">
+      <div style="text-align:center;">
+        <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;border:2.5px solid var(--border);margin:0 auto 10px;"><img src="assets/avatars/contr-1.png" style="width:100%;height:100%;object-fit:cover;" alt="Ayo"></div>
+        <strong style="font-size:14px;">Ayo Adewale</strong><br><span style="font-size:12px;color:var(--mid);">Lead Analyst</span>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;border:2.5px solid var(--border);margin:0 auto 10px;"><img src="assets/avatars/contr-2.png" style="width:100%;height:100%;object-fit:cover;" alt="Tosin"></div>
+        <strong style="font-size:14px;">Tosin Bello</strong><br><span style="font-size:12px;color:var(--mid);">Research Lead</span>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;border:2.5px solid var(--border);margin:0 auto 10px;"><img src="assets/avatars/contr-1.png" style="width:100%;height:100%;object-fit:cover;" alt="Ibrahim"></div>
+        <strong style="font-size:14px;">Ibrahim Musa</strong><br><span style="font-size:12px;color:var(--mid);">Data Engineer</span>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;border:2.5px solid var(--border);margin:0 auto 10px;"><img src="assets/avatars/contr-2.png" style="width:100%;height:100%;object-fit:cover;" alt="Funke"></div>
+        <strong style="font-size:14px;">Funke Ogun</strong><br><span style="font-size:12px;color:var(--mid);">Insights Analyst</span>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <a href="contr.html" class="btn secondary">Meet All Contributors →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><p>© 2026 Analyst Den by Datavasity</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contributors | Analyst Den</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html"><img src="assets/analyst-den-logo-3d.png" class="logo-img" alt="Analyst Den Logo"></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="pjt.html">Projects</a>
+      <a href="process.html">Process</a>
+      <a href="publications.html">Publications</a>
+      <a href="get-involved.html" class="active">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <button class="close-menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="pjt.html">Projects</a>
+  <a href="process.html">Process</a>
+  <a href="publications.html">Publications</a>
+  <a href="get-involved.html" class="active">Get Involved</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="contributor-hero">
+  <div class="container">
+    <span class="section-label" style="background:rgba(212,166,64,0.2);border-color:rgba(212,166,64,0.4);">The Community</span>
+    <h1 style="margin-top:12px;">Our Contributors</h1>
+    <p>Analysts, researchers, and collaborators working on real-world data projects with public and business impact.</p>
+  </div>
+</div>
+
+<main>
+  <section class="contributor-controls">
+    <div class="container contributor-controls-row">
+      <div class="contributor-search">
+        <input type="text" id="contributor-search" placeholder="Search contributors by name…"/>
+      </div>
+      <div class="contributor-sort">
+        <select id="contributor-sort">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="contributor-grid" id="contributorGrid">
+
+      <a href="contributordetail.html" class="contributor-card" data-date="2026-08-01">
+        <div class="contributor-avatar"><img src="assets/avatars/contr-1.png" alt="Ayo Adewale"></div>
+        <h3>Ayo Adewale</h3>
+        <span>Lead Analyst</span>
+        <small>Joined Aug 2026</small>
+      </a>
+
+      <a href="contributordetail.html" class="contributor-card" data-date="2026-06-12">
+        <div class="contributor-avatar"><img src="assets/avatars/contr-2.png" alt="Tosin Bello"></div>
+        <h3>Tosin Bello</h3>
+        <span>Research Lead</span>
+        <small>Joined Jun 2026</small>
+      </a>
+
+      <a href="contributordetail.html" class="contributor-card" data-date="2026-03-18">
+        <div class="contributor-avatar"><img src="assets/avatars/contr-1.png" alt="Ibrahim Musa"></div>
+        <h3>Ibrahim Musa</h3>
+        <span>Data Engineer</span>
+        <small>Joined Mar 2026</small>
+      </a>
+
+      <a href="contributordetail.html" class="contributor-card" data-date="2026-02-01">
+        <div class="contributor-avatar"><img src="assets/avatars/contr-2.png" alt="Funke Ogun"></div>
+        <h3>Funke Ogun</h3>
+        <span>Insights Analyst</span>
+        <small>Joined Feb 2026</small>
+      </a>
+
+      <a href="contributordetail.html" class="contributor-card" data-date="2026-01-10">
+        <div class="contributor-avatar"><img src="assets/avatars/contr-1.png" alt="Chidi Eze"></div>
+        <h3>Chidi Eze</h3>
+        <span>Field Researcher</span>
+        <small>Joined Jan 2026</small>
+      </a>
+
+      <a href="contributordetail.html" class="contributor-card" data-date="2025-12-01">
+        <div class="contributor-avatar"><img src="assets/avatars/contr-2.png" alt="Amaka Obi"></div>
+        <h3>Amaka Obi</h3>
+        <span>Data Analyst</span>
+        <small>Joined Dec 2025</small>
+      </a>
+
+      <a href="contributordetail.html" class="contributor-card" data-date="2025-11-15">
+        <div class="contributor-avatar"><img src="assets/avatars/contr-1.png" alt="Yusuf Dada"></div>
+        <h3>Yusuf Dada</h3>
+        <span>Visualisation Analyst</span>
+        <small>Joined Nov 2025</small>
+      </a>
+
+      <a href="contributordetail.html" class="contributor-card" data-date="2025-10-01">
+        <div class="contributor-avatar"><img src="assets/avatars/contr-2.png" alt="Ngozi Onu"></div>
+        <h3>Ngozi Onu</h3>
+        <span>Policy Researcher</span>
+        <small>Joined Oct 2025</small>
+      </a>
+
+    </div>
+
+    <div class="contributors-pagination">
+      <button data-page="prev">‹</button>
+      <button class="active" data-page="1">1</button>
+      <button data-page="2">2</button>
+      <button data-page="next">›</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><p>© 2026 Analyst Den by Datavasity</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

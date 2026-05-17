@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Involved | Analyst Den</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .role-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 64px 0 56px;
+    }
+    .role-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+    .role-card:hover, .role-card.selected {
+      border-color: var(--gold);
+      box-shadow: 0 6px 24px rgba(212,166,64,0.15);
+      transform: translateY(-3px);
+    }
+    .role-card.selected { background: #fffbf2; }
+    .role-card.selected::after {
+      content: '✓';
+      position: absolute;
+      top: 14px; right: 16px;
+      width: 22px; height: 22px;
+      background: var(--gold);
+      color: var(--black);
+      border-radius: 50%;
+      font-size: 11px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      line-height: 22px; text-align: center;
+    }
+    .role-icon { font-size: 28px; }
+    .role-card h3 { font-size: 16px; font-weight: 700; margin: 0; }
+    .role-card p { font-size: 13px; color: var(--mid); line-height: 1.55; margin: 0; flex: 1; }
+    .role-tag {
+      display: inline-block;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      background: var(--muted-bg); color: var(--mid);
+      border: 1px solid var(--border);
+      margin-top: 4px; width: fit-content;
+    }
+    .role-tag.open { background: rgba(40,160,80,0.1); color: #28a050; border-color: rgba(40,160,80,0.25); }
+
+    .perks-strip {
+      background: var(--black); color: var(--cream);
+      border-radius: var(--radius-xl);
+      padding: 52px 48px; margin-bottom: 72px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+    }
+    .perk-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(247,243,234,0.1);
+    }
+    .perk-item:last-child { border-bottom: none; }
+    .perk-check {
+      width: 22px; height: 22px;
+      background: var(--gold); color: var(--black);
+      border-radius: 50%; font-size: 11px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .perk-item strong { display: block; color: var(--cream); font-size: 15px; margin-bottom: 2px; }
+    .perk-item span { font-size: 13px; color: rgba(247,243,234,0.6); }
+
+    .apply-section { padding: 0 0 96px; }
+    .tally-wrap {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+    .tally-wrap iframe { width: 100%; border: none; min-height: 700px; display: block; }
+
+    .faq-list { padding: 64px 0 80px; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; cursor: pointer; }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 16px; }
+    .faq-toggle { font-size: 20px; color: var(--mid); transition: transform var(--transition); flex-shrink: 0; }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); color: var(--gold-dk); }
+    .faq-a { font-size: 14px; color: var(--mid); line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height 0.32s ease, padding 0.2s ease; }
+    .faq-item.open .faq-a { max-height: 200px; padding-top: 12px; }
+
+    @media (max-width: 900px) {
+      .role-cards { grid-template-columns: repeat(2, 1fr); }
+      .perks-strip { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 540px) {
+      .role-cards { grid-template-columns: 1fr; }
+      .perks-strip { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html"><img src="assets/analyst-den-logo-3d.png" class="logo-img" alt="Analyst Den Logo"></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="pjt.html">Projects</a>
+      <a href="process.html">Process</a>
+      <a href="publications.html">Publications</a>
+      <a href="get-involved.html" class="active">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <button class="close-menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="pjt.html">Projects</a>
+  <a href="process.html">Process</a>
+  <a href="publications.html">Publications</a>
+  <a href="get-involved.html" class="active">Get Involved</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="simple-page-hero">
+  <div class="container">
+    <span class="section-label" style="background:rgba(212,166,64,0.2);border-color:rgba(212,166,64,0.4);">Join the Community</span>
+    <h1 style="margin-top:12px;">Get Involved</h1>
+    <p>Whether you're a student, practising analyst, or researcher — there's a role for you. Pick below and apply in under 3 minutes.</p>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- STEP 1: ROLE PICKER -->
+  <div style="padding-top:64px;">
+    <span class="section-label">Step 1 — Choose your role</span>
+    <h2 style="font-size:28px; margin-top:12px; margin-bottom:0;">What would you like to do?</h2>
+    <p style="margin-top:8px; font-size:15px;">Click a card to select your role, then scroll down to apply.</p>
+  </div>
+
+  <div class="role-cards" id="roleCards">
+    <div class="role-card" data-role="Field Researcher" onclick="selectRole(this)">
+      <div class="role-icon">📊</div>
+      <h3>Field Researcher</h3>
+      <p>Collect data through structured surveys and interviews. Training provided — no prior experience needed.</p>
+      <span class="role-tag open">Open</span>
+    </div>
+    <div class="role-card" data-role="Data Analyst" onclick="selectRole(this)">
+      <div class="role-icon">🔬</div>
+      <h3>Data Analyst</h3>
+      <p>Clean, analyse, and visualise datasets from the field. Build a real published portfolio.</p>
+      <span class="role-tag open">Open</span>
+    </div>
+    <div class="role-card" data-role="Insight Writer" onclick="selectRole(this)">
+      <div class="role-icon">✍️</div>
+      <h3>Insight Writer</h3>
+      <p>Turn data findings into readable reports and narratives that decision-makers act on.</p>
+      <span class="role-tag open">Open</span>
+    </div>
+    <div class="role-card" data-role="Research Lead" onclick="selectRole(this)">
+      <div class="role-icon">🗺️</div>
+      <h3>Research Lead</h3>
+      <p>Design methodology, manage field teams, ensure data quality. Prior research experience required.</p>
+      <span class="role-tag">Experienced</span>
+    </div>
+    <div class="role-card" data-role="Institutional Partner" onclick="selectRole(this)">
+      <div class="role-icon">🏛️</div>
+      <h3>Institutional Partner</h3>
+      <p>Organisations and NGOs — partner with us to scope and fund research that matters.</p>
+      <span class="role-tag">Partnership</span>
+    </div>
+    <div class="role-card" data-role="Project Proposal" onclick="selectRole(this)">
+      <div class="role-icon">💡</div>
+      <h3>Propose a Project</h3>
+      <p>Have a community challenge that needs data? Pitch a project. We review proposals quarterly.</p>
+      <span class="role-tag">Quarterly</span>
+    </div>
+  </div>
+
+  <!-- PERKS -->
+  <div class="perks-strip">
+    <div>
+      <span class="section-label" style="background:rgba(212,166,64,0.2);border-color:rgba(212,166,64,0.4);">Why Contribute</span>
+      <h2 style="font-size:28px; margin:14px 0 16px; color:var(--cream);">What you get as a contributor</h2>
+      <p style="color:rgba(247,243,234,0.7); font-size:15px; margin-bottom:28px;">Real experience, a public profile, and published work — not just a volunteer badge.</p>
+      <a href="#apply-form" class="btn primary">Apply Now →</a>
+    </div>
+    <div>
+      <div class="perk-item">
+        <div class="perk-check">✓</div>
+        <div><strong>Published Research Credit</strong><span>Your name on real public insight reports that go to government ministries and institutions.</span></div>
+      </div>
+      <div class="perk-item">
+        <div class="perk-check">✓</div>
+        <div><strong>Contributor Profile Page</strong><span>A public profile on analystden.com showcasing your projects and skills.</span></div>
+      </div>
+      <div class="perk-item">
+        <div class="perk-check">✓</div>
+        <div><strong>Mentorship &amp; Training</strong><span>Structured onboarding and guidance from experienced analysts for every project.</span></div>
+      </div>
+      <div class="perk-item">
+        <div class="perk-check">✓</div>
+        <div><strong>Community Network</strong><span>Access to a growing network of data analysts, researchers, and policy professionals.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: FORM -->
+  <section class="apply-section" id="apply-form">
+    <span class="section-label">Step 2 — Apply</span>
+    <h2 style="font-size:28px; margin-top:12px; margin-bottom:8px;">Submit Your Application</h2>
+    <p style="color:var(--mid); font-size:15px; margin-bottom:36px;">We review all applications within 5 working days and respond by email. Tally keeps your data private — submissions go directly to our inbox.</p>
+
+    <div class="tally-wrap">
+      <iframe
+        data-tally-src="https://tally.so/embed/zxQ0DZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="700"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Analyst Den Contributor Application">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <span class="section-label">Common Questions</span>
+    <h2 style="font-size:28px; margin-top:12px; margin-bottom:0;">FAQs</h2>
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Do I need experience to apply? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">For Field Researcher and Data Analyst roles — no prior experience required. Full training is provided before each project. For Research Lead roles we ask for at least one prior research or data project you can reference.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Is this paid work? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Current projects are voluntary and portfolio-based. Contributors receive published research credit, a public profile, and mentorship. As the platform grows and projects attract funding, we aim to introduce stipends for field work.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How much time does it take? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Field researchers typically commit 1–2 days per week during data collection phases (6–10 weeks). Analysts and writers work more flexibly — usually 3–5 hours per week, fully remote.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Do I need to be based in Nigeria? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Field researchers need to be local to the study area. Data analysts, writers, and research leads can contribute remotely from anywhere in the world.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How long does the review process take? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">We review all applications within 5 working days and reply with next steps. If a project isn't currently accepting contributors for your role, we'll put you on the waitlist and notify you when one opens.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Will I get a profile page on the site? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Yes — once you've been accepted and contributed to at least one project, we create a public contributor profile page for you on the site showing your projects, role, and skills.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer"><p>© 2026 Analyst Den by Datavasity</p></footer>
+
+<!-- Tally embed loader -->
+<script>
+  var d=document,w="https://tally.so/widgets/embed.js",
+  v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};
+  if("undefined"!=typeof Tally)v();
+  else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+</script>
+
+<script src="script.js"></script>
+<script>
+  function selectRole(card) {
+    document.querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    setTimeout(() => {
+      document.getElementById('apply-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 250);
+  }
+  function toggleFaq(item) {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
